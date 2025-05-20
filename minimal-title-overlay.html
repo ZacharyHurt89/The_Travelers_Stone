@@ -19,7 +19,6 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: none;
         }
         #title {
             text-align: center;
@@ -55,47 +54,30 @@
             border-radius: 4px;
             font-size: 0.9em;
         }
+        /* Title Page Styles */
         #title-page {
-            text-align: center;
-            position: relative;
-            height: 600px;
-            background-color: #05071F;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        #title-page svg {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-        }
-        .save-controls {
-            margin-top: 10px;
-            text-align: right;
-        }
-        .save-btn, .load-btn {
-            padding: 5px 10px;
-            margin-left: 10px;
-            color: white;
-            border: none;
-            border-radius: 4px;
+            background-color: #05071F;
+            z-index: 1000;
+            text-align: center;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .save-btn {
-            background-color: #2ecc71;
-        }
-        .save-btn:hover {
-            background-color: #27ae60;
-        }
-        .load-btn {
-            background-color: #e67e22;
-        }
-        .load-btn:hover {
-            background-color: #d35400;
+        #title-page svg {
+            max-width: 800px;
+            max-height: 100%;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- Title Page -->
+    <!-- Title Page Container (Overlay) -->
     <div id="title-page">
         <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
           <!-- Background -->
@@ -118,6 +100,7 @@
             <filter id="textGlow">
               <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
             </filter>
+            <!-- Star pattern -->
             <pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
               <circle cx="10" cy="10" r="1" fill="white" opacity="0.8" />
               <circle cx="30" cy="15" r="0.7" fill="white" opacity="0.6" />
@@ -143,15 +126,20 @@
           
           <!-- Castle on distant cliffs -->
           <g transform="translate(600, 260) scale(0.6)">
+            <!-- Castle body -->
             <rect x="-50" y="0" width="100" height="120" fill="#1A2C56" stroke="#293F5F" stroke-width="2" />
+            <!-- Towers -->
             <rect x="-65" y="-20" width="30" height="140" fill="#1A2C56" stroke="#293F5F" stroke-width="2" />
             <rect x="35" y="-20" width="30" height="140" fill="#1A2C56" stroke="#293F5F" stroke-width="2" />
+            <!-- Tower tops -->
             <polygon points="-65,-20 -50,-40 -35,-20" fill="#2C4673" stroke="#293F5F" stroke-width="2" />
             <polygon points="35,-20 50,-40 65,-20" fill="#2C4673" stroke="#293F5F" stroke-width="2" />
+            <!-- Windows -->
             <rect x="-30" y="20" width="15" height="25" fill="#3b8ffc" opacity="0.7" />
             <rect x="15" y="20" width="15" height="25" fill="#3b8ffc" opacity="0.7" />
             <rect x="-30" y="65" width="15" height="25" fill="#3b8ffc" opacity="0.7" />
             <rect x="15" y="65" width="15" height="25" fill="#3b8ffc" opacity="0.7" />
+            <!-- Tower windows -->
             <rect x="-57" y="30" width="14" height="15" fill="#3b8ffc" opacity="0.7" />
             <rect x="-57" y="70" width="14" height="15" fill="#3b8ffc" opacity="0.7" />
             <rect x="43" y="30" width="14" height="15" fill="#3b8ffc" opacity="0.7" />
@@ -163,19 +151,25 @@
           
           <!-- Ancient oak tree -->
           <g transform="translate(220, 420)">
+            <!-- Tree trunk -->
             <path d="M0,0 C-10,-20 -15,-50 -20,-80 C-10,-85 0,-82 10,-85 C15,-50 10,-20 0,0 Z" fill="#513A26" />
+            <!-- Tree roots -->
             <path d="M0,0 C-10,10 -30,15 -40,20 C-20,15 -10,10 0,10 C10,10 20,15 40,20 C30,15 10,10 0,0 Z" fill="#513A26" />
           </g>
 
           <!-- The glowing stone -->
           <g transform="translate(400, 420)">
+            <!-- Stone glow -->
             <circle cx="0" cy="0" r="50" fill="url(#stoneGlow)" filter="url(#blurFilter)" />
+            <!-- Stone pulse animation -->
             <circle cx="0" cy="0" r="35">
               <animate attributeName="r" values="35;40;35" dur="3s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite" />
               <animate attributeName="fill" values="#3B8FFC;#7DF9FF;#3B8FFC" dur="3s" repeatCount="indefinite" />
             </circle>
+            <!-- Stone inner -->
             <circle cx="0" cy="0" r="25" fill="#7DF9FF" opacity="0.8" />
+            <!-- Mystical symbols -->
             <g fill="none" stroke="white" stroke-width="1" opacity="0.9">
               <path d="M-10,-5 L10,-5 M0,-15 L0,5 M-10,10 L10,10">
                 <animate attributeName="opacity" values="0.9;0.3;0.9" dur="5s" repeatCount="indefinite" />
@@ -192,6 +186,7 @@
             <text x="0" y="20" font-family="Georgia, serif" font-size="70" font-weight="bold" fill="white" text-anchor="middle" filter="url(#dropShadow)">TRAVELER'S</text>
             <text x="0" y="90" font-family="Georgia, serif" font-size="70" font-weight="bold" fill="white" text-anchor="middle" filter="url(#dropShadow)">STONE</text>
             
+            <!-- Subtle text glow -->
             <text x="0" y="-50" font-family="Georgia, serif" font-size="50" font-weight="bold" fill="#7DF9FF" text-anchor="middle" filter="url(#textGlow)" opacity="0.4">THE</text>
             <text x="0" y="20" font-family="Georgia, serif" font-size="70" font-weight="bold" fill="#7DF9FF" text-anchor="middle" filter="url(#textGlow)" opacity="0.4">TRAVELER'S</text>
             <text x="0" y="90" font-family="Georgia, serif" font-size="70" font-weight="bold" fill="#7DF9FF" text-anchor="middle" filter="url(#textGlow)" opacity="0.4">STONE</text>
@@ -207,12 +202,7 @@
         </svg>
     </div>
 
-    <!-- Game Container -->
     <div id="game-container">
-        <div class="save-controls">
-            <button id="load-game-btn" class="load-btn">Load Game</button>
-            <button id="save-game-btn" class="save-btn">Save Game</button>
-        </div>
         <h1 id="title">The Traveler's Stone</h1>
         <div id="scene-text">Loading the game...</div>
         <div id="choices"></div>
@@ -236,7 +226,9 @@
                     element: null,
                     companion: null
                 };
-                this.currentScene = null;
+                this.currentScene = "intro";
+                this.gameOver = false;
+                
                 this.chapters = [
                     "chapter1-discovery.json",
                     "chapter2-crossing.json",
@@ -250,28 +242,13 @@
                 ];
             }
 
-            resetPlayer() {
-                this.player = {
-                    name: "Rory",
-                    health: 100,
-                    inventory: ["Glowing Blue Stone"],
-                    flags: {},
-                    score: 0,
-                    magic_power: 0,
-                    weapon: null,
-                    element: null,
-                    companion: null
-                };
-            }
-
             async loadChapters() {
                 try {
-                    console.log("Loading chapters...");
+                    // Load each chapter and merge into the scenes object
                     for (const file of this.chapters) {
-                        console.log(`Loading ${file}...`);
                         const response = await fetch(file);
                         if (!response.ok) {
-                            throw new Error(`Failed to load ${file}: ${response.status} ${response.statusText}`);
+                            throw new Error(`Failed to load ${file}`);
                         }
                         const chapterScenes = await response.json();
                         this.scenes = { ...this.scenes, ...chapterScenes };
@@ -287,7 +264,7 @@
             }
 
             getCurrentScene() {
-                return this.currentScene ? this.scenes[this.currentScene] : null;
+                return this.scenes[this.currentScene];
             }
 
             processChoice(choiceIndex) {
@@ -300,14 +277,32 @@
                 const choice = scene.choices[choiceIndex];
                 const nextScene = choice.next;
                 
+                // Check if the player is quitting or returning to title
                 if (nextScene === "intro" || nextScene === "quit") {
-                    this.resetPlayer();
-                    this.currentScene = null;
-                    this.showTitlePage();
+                    // Show title page again
+                    document.getElementById('title-page').style.display = 'flex';
+                    
+                    // Reset player stats
+                    this.player = {
+                        name: "Rory",
+                        health: 100,
+                        inventory: ["Glowing Blue Stone"],
+                        flags: {},
+                        score: 0,
+                        magic_power: 0,
+                        weapon: null,
+                        element: null,
+                        companion: null
+                    };
+                    
+                    // Set the scene to intro for when they start a new game
+                    this.currentScene = "intro";
                     return;
                 }
                 
                 this.currentScene = nextScene;
+
+                // Process any special effects from the new scene
                 this.processSpecialEffects();
                 this.renderScene();
             }
@@ -377,6 +372,7 @@
                 }
             }
 
+            // Formats text with player data
             formatText(text) {
                 return text.replace(/{(\w+)}/g, (match, key) => {
                     return this.player[key] !== undefined ? this.player[key] : match;
@@ -384,11 +380,6 @@
             }
 
             saveGame() {
-                if (!this.currentScene) {
-                    alert("No game in progress to save!");
-                    return;
-                }
-                
                 const saveData = {
                     player: this.player,
                     currentScene: this.currentScene,
@@ -396,38 +387,35 @@
                 };
                 localStorage.setItem("travelersStone_save", JSON.stringify(saveData));
                 alert("Game saved successfully!");
+                return saveData;
             }
 
             loadGame() {
                 const saveData = localStorage.getItem("travelersStone_save");
                 if (saveData) {
-                    try {
-                        const parsedData = JSON.parse(saveData);
-                        this.player = parsedData.player;
-                        this.currentScene = parsedData.currentScene;
-                        this.renderScene();
-                        this.showGameContainer();
-                        return true;
-                    } catch (error) {
-                        console.error("Error parsing save data:", error);
-                        alert("Error loading saved game!");
-                        return false;
-                    }
-                } else {
-                    alert("No saved game found!");
-                    return false;
+                    const parsedData = JSON.parse(saveData);
+                    this.player = parsedData.player;
+                    this.currentScene = parsedData.currentScene;
+                    this.renderScene();
+                    document.getElementById('title-page').style.display = 'none';
+                    return true;
                 }
+                alert("No saved game found!");
+                return false;
             }
 
             renderScene() {
                 const scene = this.getCurrentScene();
                 if (!scene) {
+                    document.getElementById('scene-text').textContent = "Scene not found!";
                     return;
                 }
 
+                // Update title and text
                 document.getElementById('title').textContent = scene.title || "The Traveler's Stone";
                 document.getElementById('scene-text').textContent = this.formatText(scene.text);
 
+                // Update choices
                 const choicesContainer = document.getElementById('choices');
                 choicesContainer.innerHTML = '';
 
@@ -441,6 +429,7 @@
                     });
                 }
 
+                // Update player info
                 let playerInfoText = `Health: ${this.player.health} | Score: ${this.player.score}`;
                 if (this.player.magic_power > 0) {
                     playerInfoText += ` | Magic: ${this.player.magic_power}`;
@@ -455,49 +444,63 @@
                     playerInfoText += ` | Companion: ${this.player.companion}`;
                 }
                 document.getElementById('player-info').textContent = playerInfoText;
+
+                // Save game state
+                localStorage.setItem("travelersStone_autosave", JSON.stringify({
+                    player: this.player,
+                    currentScene: this.currentScene,
+                    timestamp: new Date().toISOString()
+                }));
             }
 
-            showTitlePage() {
-                document.getElementById('title-page').style.display = 'block';
-                document.getElementById('game-container').style.display = 'none';
-            }
-
-            showGameContainer() {
-                document.getElementById('title-page').style.display = 'none';
-                document.getElementById('game-container').style.display = 'block';
-            }
-
-            startNewGame() {
-                this.resetPlayer();
-                this.currentScene = "intro"; 
-                this.renderScene();
-                this.showGameContainer();
+            async startGame() {
+                const loaded = await this.loadChapters();
+                if (loaded) {
+                    this.renderScene();
+                }
             }
         }
 
-        // Initialize game
-        const game = new TravelersStoneGame();
-
-        // Set up event handlers when page loads
-        document.addEventListener('DOMContentLoaded', async () => {
-            // Show title page first
-            game.showTitlePage();
+        // Start the game when the page is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const game = new TravelersStoneGame();
             
-            // Load game data in background
-            await game.loadChapters();
-            
-            // Set up event handlers
+            // Handle title page click
             document.getElementById('title-page').addEventListener('click', () => {
-                game.startNewGame();
+                document.getElementById('title-page').style.display = 'none';
+                game.startGame();
             });
             
-            document.getElementById('save-game-btn').addEventListener('click', () => {
-                game.saveGame();
-            });
+            // Add save/load buttons to the game
+            const statusBar = document.getElementById('status-bar');
+            const controlsDiv = document.createElement('div');
+            controlsDiv.style.textAlign = 'right';
+            controlsDiv.style.marginTop = '10px';
             
-            document.getElementById('load-game-btn').addEventListener('click', () => {
-                game.loadGame();
-            });
+            const saveButton = document.createElement('button');
+            saveButton.textContent = 'Save Game';
+            saveButton.style.padding = '5px 10px';
+            saveButton.style.backgroundColor = '#2ecc71';
+            saveButton.style.color = 'white';
+            saveButton.style.border = 'none';
+            saveButton.style.borderRadius = '4px';
+            saveButton.style.marginLeft = '10px';
+            saveButton.style.cursor = 'pointer';
+            saveButton.onclick = () => game.saveGame();
+            
+            const loadButton = document.createElement('button');
+            loadButton.textContent = 'Load Game';
+            loadButton.style.padding = '5px 10px';
+            loadButton.style.backgroundColor = '#e67e22';
+            loadButton.style.color = 'white';
+            loadButton.style.border = 'none';
+            loadButton.style.borderRadius = '4px';
+            loadButton.style.cursor = 'pointer';
+            loadButton.onclick = () => game.loadGame();
+            
+            controlsDiv.appendChild(loadButton);
+            controlsDiv.appendChild(saveButton);
+            statusBar.appendChild(controlsDiv);
         });
     </script>
 </body>
