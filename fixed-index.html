@@ -19,6 +19,7 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
         }
         #title {
             text-align: center;
@@ -224,8 +225,8 @@
         </svg>
     </div>
 
-    <!-- Game Container (initially hidden) -->
-    <div id="game-container" style="display: none;">
+    <!-- Game Container -->
+    <div id="game-container">
         <div class="save-controls">
             <button id="load-game-btn" class="load-btn">Load Game</button>
             <button id="save-game-btn" class="save-btn">Save Game</button>
@@ -243,8 +244,9 @@
             constructor() {
                 this.scenes = {};
                 this.player = this.getInitialPlayerState();
-                this.currentScene = "intro";
+                this.currentScene = null; // Start with no scene
                 this.gameOver = false;
+                this.initialized = false;
                 
                 this.chapters = [
                     "chapter1-discovery.json",
@@ -275,6 +277,8 @@
             }
 
             async loadChapters() {
+                if (this.initialized) return true;
+                
                 try {
                     // Load each chapter and merge into the scenes object
                     for (const file of this.chapters) {
@@ -286,6 +290,7 @@
                         this.scenes = { ...this.scenes, ...chapterScenes };
                     }
                     console.log("All chapters loaded successfully");
+                    this.initialized = true;
                     return true;
                 } catch (error) {
                     console.error("Error loading chapters:", error);
@@ -296,7 +301,7 @@
             }
 
             getCurrentScene() {
-                return this.scenes[this.currentScene];
+                return this.currentScene ? this.scenes[this.currentScene] : null;
             }
 
             processChoice(choiceIndex) {
@@ -309,7 +314,7 @@
                 const choice = scene.choices[choiceIndex];
                 const nextScene = choice.next;
                 
-                // Check if the player is quitting
+                // Check if the player is quitting or returning to intro
                 if (nextScene === "intro" || nextScene === "quit") {
                     // If player is quitting, reset the game and show title page
                     this.resetGame();
@@ -326,7 +331,7 @@
             // Reset game to initial state and show title page
             resetGame() {
                 this.player = this.getInitialPlayerState();
-                this.currentScene = "intro";
+                this.currentScene = null;
                 this.showTitlePage();
             }
 
@@ -403,6 +408,11 @@
             }
 
             saveGame() {
+                if (!this.currentScene) {
+                    alert("Cannot save - game not started!");
+                    return null;
+                }
+                
                 const saveData = {
                     player: this.player,
                     currentScene: this.currentScene,
@@ -430,12 +440,13 @@
             renderScene() {
                 const scene = this.getCurrentScene();
                 if (!scene) {
-                    document.getElementById('scene-text').textContent = "Scene not found!";
+                    document.getElementById('scene-text').textContent = "Start a new game or load a saved game.";
+                    document.getElementById('choices').innerHTML = '';
                     return;
                 }
 
                 // Update title and text
-                document.getElementById('title').textContent = scene.title;
+                document.getElementById('title').textContent = scene.title || "The Traveler's Stone";
                 document.getElementById('scene-text').textContent = this.formatText(scene.text);
 
                 // Update choices
@@ -478,36 +489,35 @@
                 document.getElementById('game-container').style.display = 'block';
             }
 
-            async startGame() {
-                const loaded = await this.loadChapters();
-                if (loaded) {
-                    this.renderScene();
-                }
+            // Start a new game from the intro scene
+            startNewGame() {
+                this.currentScene = "intro"; // Set to your starting scene
+                this.renderScene();
+                this.showGameContainer();
             }
         }
 
-        // Create game instance and initialize
+        // Create game instance
         const game = new TravelersStoneGame();
 
-        // Start the game when the page is loaded
+        // Wait for page to be fully loaded
         document.addEventListener('DOMContentLoaded', async () => {
-            // Load chapters but don't start game yet - show title page first
+            // Load chapters data first
             await game.loadChapters();
             
-            // Make sure title page is visible and game container is hidden on initial load
+            // Make sure title page is showing initially
             game.showTitlePage();
             
-            // Set up title page click handler
+            // Title page click starts a new game
             document.getElementById('title-page').addEventListener('click', () => {
-                game.showGameContainer();
-                game.renderScene();
+                game.startNewGame();
             });
-
+            
             // Set up save/load buttons
             document.getElementById('save-game-btn').addEventListener('click', () => {
                 game.saveGame();
             });
-
+            
             document.getElementById('load-game-btn').addEventListener('click', () => {
                 game.loadGame();
             });
