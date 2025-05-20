@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "The Traveler's Stone",
+    "version": "1.0",
+    "author": "Rory's Adventure",
+    "description": "A fantasy adventure where a young hero named Rory finds a mysterious stone that transports them to a magical realm.",
+    "chapterFiles": [
+      "chapter1-discovery.json",
+      "chapter2-crossing.json",
+      "chapter3-knights.json",
+      "chapter4-castle-journey.json",
+      "chapter5-meeting-king.json",
+      "chapter6-weapons.json",
+      "chapter6b-elements.json",
+      "chapter7-companions.json",
+      "chapter8-quest-begins.json"
+    ],
+    "startScene": "intro"
+  },
+  "instructions": {
+    "loading": "To run the game, load all chapter JSON files and combine them into a single scenes object. The game starts with the 'intro' scene.",
+    "save_format": "Save files should contain the player's current state, including inventory, scores, and flags, along with the current scene ID.",
+    "game_structure": "The game is organized in chapters for maintainability. This modular approach allows for easier updates and expansion of content."
+  },
+  "player_template": {
+    "name": "Rory",
+    "health": 100,
+    "inventory": ["Glowing Blue Stone"],
+    "flags": {},
+    "score": 0,
+    "magic_power": 0,
+    "weapon": null,
+    "element": null,
+    "companion": null
+  }
+}

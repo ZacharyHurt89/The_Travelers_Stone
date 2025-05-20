@@ -1,0 +1,23 @@
+{
+  "journey_to_castle": {
+    "title": "The Road to Hellstrom",
+    "text": "Knight Commander Kira helps you mount behind her on her white steed. As \nyou ride toward the castle, she points out landmarks.\n\n\"Those are the Singing Cliffs,\" she says, indicating crystal spires that hum \nin the wind. \"Beyond those hills lie the Twisted Lands, where the Shadow's \ncorruption has taken hold.\"\n\nThe castle grows larger - a magnificent fortress of black stone and silver \nspires reaching skyward like a crown of stars.\n\nScore: +25 points for beginning your quest",
+    "choices": [
+      {
+        "text": "Approach the castle gates",
+        "next": "castle_arrival"
+      }
+    ],
+    "special": "chapter_points"
+  },
+  "castle_arrival": {
+    "title": "The Gates of Hellstrom Castle",
+    "text": "Massive gates loom before you, carved from black stone with gleaming \nsilver inlays. Guards in armor salute Knight Commander Kira as she approaches.\n\n\"Make way for the Stone-Bearer!\" she calls. The gates swing open with a deep, \nresonant sound.\n\nBeyond lies a bustling courtyard - servants tending magical gardens, knights \ntraining with enchanted weapons, scholars studying ancient tomes.\n\n\"His Majesty King Hellstrom awaits you in the throne room,\" Kira explains. \n\"He has been preparing for your arrival since the prophecies first spoke of \nyour coming.\"",
+    "choices": [
+      {
+        "text": "Enter the throne room immediately",
+        "next": "meet_king"
+      }
+    ]
+  }
+}

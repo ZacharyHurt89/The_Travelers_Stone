@@ -1,0 +1,185 @@
+{
+  "intro": {
+    "title": "The Mysterious Finding",
+    "text": "\n╔═══════════════════════════════════════════════════════════════╗\n║                    THE TRAVELER'S STONE                      ║\n║                                                               ║\n║  Young Rory trudges home from school, his backpack heavy     ║\n║  with homework. As he cuts through the old forest path,      ║\n║  something catches his eye...                                ║\n║                                                               ║\n║  There, nestled between the roots of an ancient oak tree,    ║\n║  lies a perfectly round stone that glows with a soft blue    ║\n║  light. It pulses gently, almost like a heartbeat.          ║\n╚═══════════════════════════════════════════════════════════════╝\n\nThe stone seems to call to you. What do you do?",
+    "choices": [
+      {
+        "text": "Pick up the glowing stone",
+        "next": "pickup_stone"
+      },
+      {
+        "text": "Examine it more closely first",
+        "next": "examine_stone"
+      },
+      {
+        "text": "Leave it and continue home",
+        "next": "ignore_stone"
+      }
+    ]
+  },
+  "examine_stone": {
+    "title": "A Closer Look",
+    "text": "You kneel and examine the stone carefully. It's perfectly spherical, \nabout the size of a marble, glowing with swirling blue light.\n\nStrange symbols are etched into its surface, shifting when you're not \nlooking directly at them. The stone pulses brighter as you get closer.",
+    "choices": [
+      {
+        "text": "Touch the stone",
+        "next": "pickup_stone"
+      },
+      {
+        "text": "Try to read the symbols",
+        "next": "read_symbols"
+      },
+      {
+        "text": "Back away from it",
+        "next": "ignore_stone"
+      }
+    ]
+  },
+  "read_symbols": {
+    "title": "Ancient Markings",
+    "text": "As you focus on the symbols, they glow brighter and shift before your eyes. \nThe markings appear to be ancient script - one resembles a doorway, another \na castle on an island.\n\nThe stone grows warmer in response to your attention.",
+    "choices": [
+      {
+        "text": "Touch the stone",
+        "next": "pickup_stone"
+      },
+      {
+        "text": "Try to memorize the symbols",
+        "next": "memorize_symbols"
+      },
+      {
+        "text": "Back away from it",
+        "next": "ignore_stone"
+      }
+    ]
+  },
+  "memorize_symbols": {
+    "title": "Mysterious Knowledge",
+    "text": "You study the symbols carefully, committing them to memory. The markings \nseem to burn themselves into your mind - you'll remember them forever.\n\nThe stone pulses brighter, pleased by your attention.\n\n[KNOWLEDGE GAINED: Ancient Symbols]",
+    "choices": [
+      {
+        "text": "Pick up the stone",
+        "next": "pickup_stone"
+      },
+      {
+        "text": "Leave the stone and go home",
+        "next": "ignore_stone"
+      }
+    ],
+    "special": "gain_knowledge"
+  },
+  "ignore_stone": {
+    "title": "The Path Not Taken",
+    "text": "You decide to leave the mysterious object alone. You hurry home, but can't \nshake the feeling you've made a terrible mistake.\n\nThat night you dream of adventures and magic kingdoms. You wake to find the \nstone on your nightstand, glowing softly.\n\nPerhaps some destinies cannot be avoided...",
+    "choices": [
+      {
+        "text": "Pick up the stone",
+        "next": "pickup_stone"
+      },
+      {
+        "text": "Try to ignore it again",
+        "next": "persistent_stone"
+      }
+    ]
+  },
+  "persistent_stone": {
+    "title": "Destiny Calls",
+    "text": "The stone seems determined to be noticed, appearing in impossible places \nthroughout the day. Your parents can't see it at all.\n\nFinally, exhausted by its persistence, you give in.",
+    "choices": [
+      {
+        "text": "Accept your fate and take the stone",
+        "next": "pickup_stone"
+      }
+    ]
+  },
+  "pickup_stone": {
+    "title": "The Stone's Touch",
+    "text": "Warmth spreads through your hand as you touch the stone. It pulses brighter, \nand you feel a strange tingling sensation.\n\nThe stone feels perfectly smooth and vibrates gently. You slip it into your \npocket and hurry home.",
+    "choices": [
+      {
+        "text": "Go straight to your room",
+        "next": "room_scene"
+      },
+      {
+        "text": "Show it to your parents first",
+        "next": "show_parents"
+      }
+    ]
+  },
+  "show_parents": {
+    "title": "Parental Confusion",
+    "text": "You rush to show your parents the stone, but they can't see it at all.\n\"Rory, there's nothing in your hands,\" your father says gently.\n\nThey're concerned about your mental health. The stone is invisible to everyone \nbut you, making it even more mysterious.",
+    "choices": [
+      {
+        "text": "Go to your room with the stone",
+        "next": "room_scene"
+      },
+      {
+        "text": "Try to convince them it's real",
+        "next": "convince_parents"
+      }
+    ]
+  },
+  "convince_parents": {
+    "title": "Failed Explanation",
+    "text": "You spend ten minutes trying to convince them, but they suggest you get \nsome rest. Frustrated but realizing it's hopeless, you head to your room.\n\nThe stone seems to pulse with understanding.",
+    "choices": [
+      {
+        "text": "Go to your room",
+        "next": "room_scene"
+      }
+    ]
+  },
+  "room_scene": {
+    "title": "In Your Room",
+    "text": "In your room, the stone glows brighter, casting blue shadows on the walls. \nYou can't focus on homework - the stone seems to whisper wordlessly.\n\nBefore you know it, you're in bed holding it close.",
+    "choices": [
+      {
+        "text": "Let yourself fall asleep",
+        "next": "fall_asleep"
+      },
+      {
+        "text": "Force yourself to stay awake",
+        "next": "stay_awake"
+      },
+      {
+        "text": "Put the stone away first",
+        "next": "hide_stone"
+      }
+    ]
+  },
+  "stay_awake": {
+    "title": "Fighting Sleep",
+    "text": "You try to study the stone without sleeping, but its hypnotic warmth and \npulsing light are irresistible. Despite your efforts, your eyelids grow heavy.\n\nYou can't resist any longer and drift off still holding the stone.",
+    "choices": [
+      {
+        "text": "Let sleep take you",
+        "next": "fall_asleep"
+      }
+    ]
+  },
+  "hide_stone": {
+    "title": "Safety First",
+    "text": "You wrap the stone carefully and hide it in your dresser. But you can't \nconcentrate on homework - it calls to you from its hiding place.\n\nAfter an hour, you retrieve it. Just holding it fills you with warmth and \ncomfort. Before you know it, you're in bed with it.",
+    "choices": [
+      {
+        "text": "Fall asleep holding it",
+        "next": "fall_asleep"
+      },
+      {
+        "text": "Put it away again",
+        "next": "stubborn_resistance"
+      }
+    ]
+  },
+  "stubborn_resistance": {
+    "title": "The Stone's Pull",
+    "text": "You're determined to resist its influence, piling books on top of the drawer. \nBut you toss and turn all night, dreaming of the stone calling to you.\n\nAt 3 AM, you give up and retrieve it. The moment you touch it, profound peace \nwashes over you.",
+    "choices": [
+      {
+        "text": "Let the stone guide you to sleep",
+        "next": "fall_asleep"
+      }
+    ]
+  }
+}

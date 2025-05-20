@@ -1,0 +1,173 @@
+{
+  "fire_blade": {
+    "title": "Flames of Destiny",
+    "text": "The blade erupts in warm, golden flames that don't burn you but dance \nalong the steel like living things. You now wield the Fire Blade - a weapon \nof legend.\n\n\"Magnificent!\" King Hellstrom exclaims. \"But there is one more gift the stone \ncan bestow. Every true hero needs a faithful companion.\"\n\nThree magical circles appear on the throne room floor. Within each, a creature \nbegins to materialize:\n\n🐉 A DRAGON - Powerful in flight, breathes devastating fire\n🐺 A DIREWOLF - Swift and cunning, loyal beyond measure  \n🦅 A GRIFFIN - Noble and proud, soars above any obstacle\n\n\"The Traveler's Stone will call forth whichever creature resonates with your \nspirit. Choose your eternal companion.\"\n\n[WEAPON: Fire Blade equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_fire"
+  },
+  "ice_blade": {
+    "title": "Frost of Destiny",
+    "text": "The blade becomes wreathed in crystalline ice that sparkles like diamonds. \nFrost patterns dance along the steel, and the air around you grows crisp and \ncold. You now wield the Ice Blade.\n\n\"The power of winter itself flows through that weapon,\" the King says in awe. \n\"But your arsenal is not yet complete.\"\n\nThe Traveler's Stone glows, and three summoning circles appear before you:\n\n🐉 A DRAGON - Master of ice and snow, breathes freezing blasts\n🐺 A DIREWOLF - Hunter of winter, moves like a blizzard\n🦅 A GRIFFIN - Ice-winged majesty, ruler of mountain peaks\n\n\"Choose the companion that will stand by you in your quest.\"\n\n[WEAPON: Ice Blade equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_ice"
+  },
+  "lightning_blade": {
+    "title": "Storm of Destiny",
+    "text": "Electric energy crackles along the blade's edge, and tiny bolts of \nlightning dance between your fingers. The weapon hums with barely contained \npower. You now wield the Lightning Blade.\n\n\"The very storms bow to your command,\" King Hellstrom breathes. \"Now, for \nthe final gift of the stone.\"\n\nThree glowing circles manifest around you:\n\n🐉 A DRAGON - Storm-caller, breathes lightning and thunder\n🐺 A DIREWOLF - Swift as lightning, eyes like crackling sparks\n🦅 A GRIFFIN - Storm-rider, wings that command the winds\n\n\"From these noble beasts, choose your lifelong companion.\"\n\n[WEAPON: Lightning Blade equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_lightning"
+  },
+  "fire_axe": {
+    "title": "Inferno of Power",
+    "text": "Flames engulf the great axe, but you feel no heat - only power flowing \nthrough your arms. Each practice swing leaves blazing trails in the air. \nYou now wield the Fire Axe.\n\n\"A weapon befitting a warrior of legend,\" the King declares. \"Now, choose \nyour companion for the battles ahead.\"\n\nThree summoning circles appear:\n\n🐉 A DRAGON - Devastating in combat, breathes molten fire\n🐺 A DIREWOLF - Fierce pack hunter, coat like living embers\n🦅 A GRIFFIN - Aerial warrior, wings trailing flames\n\n\"The stone awaits your choice.\"\n\n[WEAPON: Fire Axe equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_fire"
+  },
+  "ice_axe": {
+    "title": "Glacier's Edge",
+    "text": "The axe becomes covered in gleaming ice that never melts. With each swing, \nthe air itself seems to freeze. You now wield the Ice Axe - a weapon of \nwinter's fury.\n\n\"Cold as the mountain peaks, yet burning with power,\" King Hellstrom observes. \n\"Choose your companion.\"\n\nThree icy circles form:\n\n🐉 A DRAGON - Ancient and wise, breathes blizzards\n🐺 A DIREWOLF - Silent hunter, fur white as fresh snow\n🦅 A GRIFFIN - Mountain sovereign, wings of crystal ice\n\n\"Let the stone guide your choice.\"\n\n[WEAPON: Ice Axe equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_ice"
+  },
+  "lightning_axe": {
+    "title": "Thunder's Wrath",
+    "text": "Lightning courses along the axe's edge, crackling with barely contained \nenergy. The very air vibrates with power. You now wield the Lightning Axe - \nweapon of storms.\n\n\"The thunder itself obeys that blade,\" the King says with wonder. \"Now choose \nyour final companion.\"\n\nThree electric circles pulse with energy:\n\n🐉 A DRAGON - Lord of storms, commands wind and lightning\n🐺 A DIREWOLF - Swift as lightning, eyes like storm clouds\n🦅 A GRIFFIN - Tempest rider, master of the stormy skies\n\n\"Make your choice, Storm-Bearer.\"\n\n[WEAPON: Lightning Axe equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_lightning"
+  },
+  "fire_bow": {
+    "title": "Arrows of Flame",
+    "text": "The bow string glows like molten gold, and when you draw it, an arrow \nof pure fire materializes. The weapon thrums with elemental power. You now \nwield the Fire Bow.\n\n\"A weapon of precision and devastation,\" the King notes. \"Choose your companion \nfor the journey ahead.\"\n\nThree fiery circles appear:\n\n🐉 A DRAGON - Aerial archer's mount, breathes concentrated flame\n🐺 A DIREWOLF - Fleet scout, eyes like burning coals\n🦅 A GRIFFIN - Sky hunter, feathers edged with fire\n\n\"The final choice awaits.\"\n\n[WEAPON: Fire Bow equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_fire"
+  },
+  "ice_bow": {
+    "title": "Frost Arrow",
+    "text": "The bow becomes covered in delicate frost patterns, and crystalline \narrows form when you draw the string. You now wield the Ice Bow - precise \nand deadly.\n\n\"Each shot will freeze your enemies' hearts,\" the King says approvingly. \n\"Choose your companion.\"\n\nThree frost circles manifest:\n\n🐉 A DRAGON - Wise and patient, breathes freezing mist\n🐺 A DIREWOLF - Silent tracker, paws that leave frost prints\n🦅 A GRIFFIN - Ice-winged sniper, eyes like winter stars\n\n\"The stone awaits your final decision.\"\n\n[WEAPON: Ice Bow equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_ice"
+  },
+  "lightning_bow": {
+    "title": "Storm Archer",
+    "text": "Electric energy dances along the bow, and arrows of pure lightning form \nat your command. The weapon hums with storm power. You now wield the Lightning Bow.\n\n\"Swift as lightning, accurate as thunder,\" King Hellstrom declares. \"Choose \nyour final companion.\"\n\nThree electrical circles crackle to life:\n\n🐉 A DRAGON - Storm lord, master of wind currents for perfect shots\n🐺 A DIREWOLF - Lightning-fast scout, fur crackling with static\n🦅 A GRIFFIN - Thunder-wing, rides the storm winds\n\n\"Complete your destiny, young archer.\"\n\n[WEAPON: Lightning Bow equipped]",
+    "choices": [
+      {
+        "text": "Call forth the Dragon",
+        "next": "summon_dragon"
+      },
+      {
+        "text": "Call forth the Direwolf",
+        "next": "summon_wolf"
+      },
+      {
+        "text": "Call forth the Griffin",
+        "next": "summon_griffin"
+      }
+    ],
+    "special": "element_lightning"
+  }
+}

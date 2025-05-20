@@ -1,0 +1,35 @@
+{
+  "summon_dragon": {
+    "title": "Bond of the Dragon",
+    "text": "You hold the Traveler's Stone high and feel its power flow through you. \nThe summoning circle blazes with light, and from within emerges a magnificent dragon.\n\nThe creature is smaller than the legends speak of - about the size of a large \nhorse - but no less magnificent. Its scales shimmer with the same element as \nyour weapon, and its intelligent eyes regard you with ancient wisdom.\n\n\"I am sworn to you, Stone-Bearer,\" it speaks directly into your mind. \"Together, \nwe shall bring light to the darkness.\"\n\nKing Hellstrom bows respectfully to your new companion.\n\n\"The bond between dragon and rider is sacred. You are now truly ready to face \nthe Shadow. Go forth, brave Rory, and may fortune smile upon your quest!\"\n\n[COMPANION: Dragon acquired]\n[QUEST UNLOCKED: Defeat the Shadow]",
+    "choices": [
+      {
+        "text": "Begin your adventure",
+        "next": "start_quest"
+      }
+    ],
+    "special": "companion_dragon"
+  },
+  "summon_wolf": {
+    "title": "Bond of the Wolf",
+    "text": "The Traveler's Stone pulses with power as you direct its energy toward \nthe summoning circle. A massive direwolf materializes - as tall as your waist \nand twice as long.\n\nIts fur matches your weapon's element, and its eyes burn with fierce loyalty. \nThe great wolf pads over to you and presses its massive head against your hand.\n\n\"Pack-brother,\" it says in your mind. \"Where you go, I follow. The hunt begins.\"\n\n\"The bond of the wolf pack is unbreakable,\" King Hellstrom observes. \"You have \nchosen a companion of courage and cunning. Now go, hero of prophecy - your \ndestiny awaits!\"\n\n[COMPANION: Direwolf acquired]\n[QUEST UNLOCKED: Defeat the Shadow]",
+    "choices": [
+      {
+        "text": "Begin your adventure",
+        "next": "start_quest"
+      }
+    ],
+    "special": "companion_wolf"
+  },
+  "summon_griffin": {
+    "title": "Bond of the Griffin",
+    "text": "You raise the Traveler's Stone, and its light calls forth a creature \nof legend. The griffin that emerges is breathtaking - eagle head and wings \nwith the body of a great lion.\n\nIts feathers and fur gleam with your weapon's elemental power, and it spreads \nits mighty wings in a display of majesty. The noble creature bows its head \nto you in respect.\n\n\"Noble rider,\" it speaks in your thoughts, \"the skies themselves shall carry \nus to victory.\"\n\n\"The griffin chooses its rider as carefully as the rider chooses it,\" the King \nsays with reverence. \"You are blessed among heroes. Now fly forth and save \nour realm!\"\n\n[COMPANION: Griffin acquired]\n[QUEST UNLOCKED: Defeat the Shadow]",
+    "choices": [
+      {
+        "text": "Begin your adventure",
+        "next": "start_quest"
+      }
+    ],
+    "special": "companion_griffin"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "blade_choice": {
+    "title": "The Blade Awakens",
+    "text": "As your hand closes around the sword's hilt, the Traveler's Stone pulses \nwith energy. The blade suddenly blazes with magical power, and you must choose \nits elemental aspect:\n\n🔥 FLAME - Burns enemies and lights the darkest paths\n❄️ ICE - Freezes foes and extinguishes fires\n⚡ LIGHTNING - Strikes with speed and chains between enemies\n\n\"Choose the element that resonates with your soul,\" the King says.\n\n[WEAPON ACQUIRED: Royal Blade]",
+    "choices": [
+      {
+        "text": "Bind the blade with Fire",
+        "next": "fire_blade"
+      },
+      {
+        "text": "Bind the blade with Ice",
+        "next": "ice_blade"
+      },
+      {
+        "text": "Bind the blade with Lightning",
+        "next": "lightning_blade"
+      }
+    ],
+    "special": "weapon_royal_blade"
+  },
+  "axe_choice": {
+    "title": "The Axe Awakens",
+    "text": "As you grasp the great axe, its weight feels perfect in your hands. The \nTraveler's Stone responds, and magical energy courses through the weapon.\nNow choose its element:\n\n🔥 FLAME - Each swing leaves trails of fire\n❄️ ICE - Shatters enemies like brittle ice\n⚡ LIGHTNING - Thunderous impacts stun nearby foes\n\n\"The axe has chosen you as surely as you have chosen it,\" King Hellstrom \nobserves. \"Now bind it with elemental power.\"\n\n[WEAPON ACQUIRED: Great Axe]",
+    "choices": [
+      {
+        "text": "Bind the axe with Fire",
+        "next": "fire_axe"
+      },
+      {
+        "text": "Bind the axe with Ice",
+        "next": "ice_axe"
+      },
+      {
+        "text": "Bind the axe with Lightning",
+        "next": "lightning_axe"
+      }
+    ],
+    "special": "weapon_great_axe"
+  },
+  "bow_choice": {
+    "title": "The Bow Awakens",
+    "text": "The mystic bow feels alive in your hands, its string humming with barely \ncontained power. The Traveler's Stone glows brighter, offering you a choice \nof elements:\n\n🔥 FLAME - Arrows of fire that explode on impact\n❄️ ICE - Freezing arrows that create walls of ice\n⚡ LIGHTNING - Bolts that leap between multiple targets\n\n\"An excellent choice,\" the King nods approvingly. \"Few can master the mystic \narts of the bow. Now, choose your element.\"\n\n[WEAPON ACQUIRED: Mystic Bow]",
+    "choices": [
+      {
+        "text": "Bind the bow with Fire",
+        "next": "fire_bow"
+      },
+      {
+        "text": "Bind the bow with Ice",
+        "next": "ice_bow"
+      },
+      {
+        "text": "Bind the bow with Lightning",
+        "next": "lightning_bow"
+      }
+    ],
+    "special": "weapon_mystic_bow"
+  }
+}

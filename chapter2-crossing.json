@@ -1,0 +1,67 @@
+{
+  "fall_asleep": {
+    "title": "The Magical Transport",
+    "text": "As sleep takes you, the stone's glow intensifies. Blue light fills your \nvision, and you feel yourself falling... floating...\n\nThe world dissolves in streams of azure light.\n\nYou wake to waves crashing against sand. Salt air fills your lungs. You're \non a beach with the stone still in your hand.\n\nBut this isn't any normal beach. Three moons hang in the purple sky, and a \nmagnificent castle rises from distant cliffs.",
+    "choices": [
+      {
+        "text": "Stand up and look around",
+        "next": "beach_awakening"
+      },
+      {
+        "text": "Check if the stone is still glowing",
+        "next": "check_stone"
+      },
+      {
+        "text": "Call out to see if anyone's around",
+        "next": "call_out"
+      }
+    ]
+  },
+  "beach_awakening": {
+    "title": "The Strange Shore",
+    "text": "You stand on white sand that sparkles like diamonds. The water is crystal \nclear, with glowing coral formations in the shallows.\n\nBehind you, a dense forest rises toward cloud-piercing mountains. Across the \nwater, an imposing castle silhouette dominates the horizon.\n\nSuddenly, you hear approaching hoofbeats.",
+    "choices": [
+      {
+        "text": "Face the approaching riders",
+        "next": "meet_knights"
+      },
+      {
+        "text": "Hide behind some rocks",
+        "next": "hide_from_knights"
+      },
+      {
+        "text": "Run toward the forest",
+        "next": "flee_to_forest"
+      }
+    ]
+  },
+  "check_stone": {
+    "title": "The Stone's Power",
+    "text": "The stone pulses with renewed energy. As you focus on it, you feel strange \npower coursing through you.\n\nYou sense you're in a magical realm far from home, but everything else remains \na mystery.\n\nThe sound of approaching hoofbeats interrupts your revelation.",
+    "choices": [
+      {
+        "text": "Stand confidently and face them",
+        "next": "meet_knights"
+      },
+      {
+        "text": "Hide the stone quickly",
+        "next": "hide_stone_meet"
+      }
+    ],
+    "special": "power_discovery"
+  },
+  "call_out": {
+    "title": "Calling for Help",
+    "text": "\"Hello?\" you call across the beach. Your voice echoes, followed only by \nthe sound of waves.\n\nThen you hear thundering hoofbeats. Three riders in gleaming armor crest a \ndistant dune, galloping toward you.\n\nYour call has been answered - but are they friends or foes?",
+    "choices": [
+      {
+        "text": "Wait to meet them",
+        "next": "meet_knights"
+      },
+      {
+        "text": "Hide behind the rocks",
+        "next": "hide_from_knights"
+      }
+    ]
+  }
+}

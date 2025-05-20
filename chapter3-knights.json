@@ -1,0 +1,244 @@
+{
+  "meet_knights": {
+    "title": "The Knights of Hellstrom",
+    "text": "Three knights in silver armor ride up, their leader dismounting to approach. \nShe has kind but stern eyes and an authoritative voice.\n\n\"Young one, we are Knights of Hellstrom, sworn to protect this realm. What \nbrings a child to our shores?\"\n\nHer eyes fall on the blue stone and freeze in awe.\n\n\"That is the Traveler's Stone of legend! The prophecy is true. You are the \nChosen One who will save our kingdom from the Shadow!\"\n\nThe knights behind her kneel in reverence.",
+    "choices": [
+      {
+        "text": "Tell them your name is Rory",
+        "next": "honest_introduction"
+      },
+      {
+        "text": "Ask where you are first",
+        "next": "ask_location"
+      },
+      {
+        "text": "Show them the stone's power",
+        "next": "show_stone"
+      },
+      {
+        "text": "Ask what a Stone-Bearer is",
+        "next": "ask_stone_bearer"
+      }
+    ]
+  },
+  "honest_introduction": {
+    "title": "Speaking Truth",
+    "text": "\"My name is Rory,\" you say with growing confidence. \"I found this stone \nin a forest near my home. When I fell asleep holding it, I woke up here.\"\n\nThe knights exchange glances. Their leader nods slowly.\n\n\"Rory of the Stone,\" she says formally. \"I am Knight Commander Kira of the \nHellstrom Guard. The prophecies speak of one who would come bearing the \nTraveler's Stone in our darkest hour.\"\n\nShe gestures toward the distant castle.\n\n\"Our kingdom faces great peril. Will you come meet King Hellstrom? He has \nbeen expecting you.\"",
+    "choices": [
+      {
+        "text": "Agree to go with them",
+        "next": "journey_to_castle"
+      },
+      {
+        "text": "Ask about the prophecy first",
+        "next": "prophecy_explanation"
+      }
+    ]
+  },
+  "show_stone": {
+    "title": "The Stone's Power Revealed",
+    "text": "You hold the stone high and it blazes with brilliant light, making the \nair shimmer with magical energy. The knights' horses rear back in response.\n\nThe stone's power flows through you stronger than ever. You can feel its magic \nresponding to your will, and sense the disturbance threatening this world.\n\n\"The stone has chosen you,\" Knight Commander Kira says with reverence. \"Its \npower grows in your presence.\"\n\n[MAGIC POWER INCREASED]",
+    "choices": [
+      {
+        "text": "Ask them to explain the prophecy",
+        "next": "prophecy_explanation"
+      },
+      {
+        "text": "Accept your destiny",
+        "next": "accept_destiny"
+      }
+    ],
+    "special": "stone_revealed"
+  },
+  "ask_stone_bearer": {
+    "title": "What Is a Stone-Bearer?",
+    "text": "\"What exactly is a Stone-Bearer?\" you ask.\n\nKnight Commander Kira kneels to your eye level. \"A Stone-Bearer is chosen by \nthe Traveler's Stones themselves. Throughout history, only a few have been \nselected.\n\nStone-Bearers can channel incredible power - heal the wounded, purify corruption, \nand travel between realms. Most importantly, they can restore balance where \ndarkness threatens light.\n\nThe fact that the stone chose you means you have great heroism within you.\"",
+    "choices": [
+      {
+        "text": "Say you want to help",
+        "next": "accept_destiny"
+      },
+      {
+        "text": "Ask about the prophecies",
+        "next": "prophecy_explanation"
+      }
+    ]
+  },
+  "prophecy_explanation": {
+    "title": "The Ancient Prophecy",
+    "text": "Knight Commander Kira speaks reverently:\n\n\"Long ago, it was written: 'When darkness threatens to swallow the light, a \nchild from beyond the veil shall come bearing the Traveler's Stone. With its \npower, they shall stand against the Shadow and restore balance.'\"\n\nShe looks at you with hope and fear.\n\n\"The Shadow grows stronger each day, corrupting our lands and people. Our \nmages believe it originates from ancient ruins in the Darkwood.\n\nBut Rory, the prophecy warns the path ahead will test you unimaginably. Are \nyou ready for such a burden?\"",
+    "choices": [
+      {
+        "text": "I'm ready to face whatever comes",
+        "next": "brave_acceptance"
+      },
+      {
+        "text": "I'm scared but I'll try",
+        "next": "honest_fear"
+      },
+      {
+        "text": "Can I think about it at the castle?",
+        "next": "journey_to_castle"
+      }
+    ]
+  },
+  "honest_fear": {
+    "title": "Courage in Fear",
+    "text": "\"I'm scared,\" you admit. \"I don't know about being a hero or fighting \nshadows. But these people need help, and if I'm the only one who can provide \nit... I guess I have to try.\"\n\nKnight Commander Kira's expression softens with respect. \"True courage isn't \nthe absence of fear - it's acting in spite of it. You may be the bravest \nStone-Bearer we've ever had.\"\n\nThe stone pulses warmly, responding to your honest words.\n\n[WISDOM GAINED]",
+    "choices": [
+      {
+        "text": "Go to meet the king",
+        "next": "journey_to_castle"
+      }
+    ],
+    "special": "gain_wisdom"
+  },
+  "brave_acceptance": {
+    "title": "Embracing Destiny",
+    "text": "\"I'm ready,\" you say with more confidence than you feel. \"If this stone \nchose me and your kingdom needs help, I'll do whatever I can.\"\n\nKnight Commander Kira beams with pride. \"Spoken like a true hero! King \nHellstrom will be overjoyed to meet you.\"\n\nThe other knights cheer, and the horses seem to prance with excitement. \nYou've just accepted a destiny beyond imagination.\n\n[COURAGE INCREASED]",
+    "choices": [
+      {
+        "text": "Journey to Castle Hellstrom",
+        "next": "journey_to_castle"
+      }
+    ],
+    "special": "gain_courage"
+  },
+  "accept_destiny": {
+    "title": "Accepting Your Role",
+    "text": "\"I understand,\" you say, feeling destiny's weight settle on your shoulders. \n\"If this stone brought me here to help, I'll do what I can.\"\n\nKnight Commander Kira smiles with relief and pride. \"The realm is fortunate \nto have you, Rory. Come, let us take you to King Hellstrom. He has been \nwaiting to meet the prophesied Stone-Bearer.\"\n\nThe stone pulses brighter, responding to your acceptance.\n\n[DESTINY ACCEPTED]",
+    "choices": [
+      {
+        "text": "Go with them to the castle",
+        "next": "journey_to_castle"
+      }
+    ],
+    "special": "accept_destiny"
+  },
+  "hide_from_knights": {
+    "title": "Taking Cover",
+    "text": "You duck behind rocks near the water's edge. The stone's glow is muffled \nbut still visible.\n\nThe knights scan the beach. You hear one speak: \"The magical disturbance was \ndefinitely here. Someone with great power passed through.\"\n\nYour heart pounds. Do you stay hidden or reveal yourself?",
+    "choices": [
+      {
+        "text": "Remain hidden until they leave",
+        "next": "knights_depart"
+      },
+      {
+        "text": "Come out of hiding",
+        "next": "reveal_yourself"
+      }
+    ]
+  },
+  "knights_depart": {
+    "title": "A Missed Opportunity",
+    "text": "You wait as the knights search, then they ride away. Now you're alone \non an alien beach with no idea where to go.\n\nAs you start walking, you hear hoofbeats returning. The knights are back!\n\nThis time, you decide not to hide.",
+    "choices": [
+      {
+        "text": "Meet the returning knights",
+        "next": "meet_knights"
+      }
+    ]
+  },
+  "reveal_yourself": {
+    "title": "Coming Forward",
+    "text": "You step out from behind the rocks, the stone glowing brightly.\n\n\"I'm here,\" you call out.\n\nThe knights ride over. Their leader's eyes widen as she sees the stone.\n\n\"By the ancient laws,\" she breathes, \"a Stone-Bearer has finally come!\"",
+    "choices": [
+      {
+        "text": "Ask what a Stone-Bearer is",
+        "next": "ask_stone_bearer"
+      },
+      {
+        "text": "Introduce yourself",
+        "next": "honest_introduction"
+      }
+    ]
+  },
+  "flee_to_forest": {
+    "title": "Into the Unknown",
+    "text": "You run toward the forest, but the knights follow on horseback. You can't \noutrun horses for long.\n\nYou stumble into a clearing, cornered. The knights emerge from the trees.\n\n\"Easy, child,\" the lead knight says calmly. \"We're not your enemies.\"",
+    "choices": [
+      {
+        "text": "Stop running and listen",
+        "next": "meet_knights"
+      },
+      {
+        "text": "Ask why they're chasing you",
+        "next": "ask_why_chase"
+      }
+    ]
+  },
+  "ask_why_chase": {
+    "title": "Questions in the Forest",
+    "text": "\"Why are you chasing me?\" you demand, breathing hard.\n\nKnight Commander Kira approaches slowly. \"We sensed powerful magic on our \nshores. When we saw the light you carry, we knew what you must be.\n\nYou bear a Traveler's Stone. That makes you very important to our kingdom's \nsurvival. Please, will you come with us? Our king has been waiting.\"",
+    "choices": [
+      {
+        "text": "Ask what a Traveler's Stone is",
+        "next": "ask_stone_bearer"
+      },
+      {
+        "text": "Agree to go with them",
+        "next": "journey_to_castle"
+      }
+    ]
+  },
+  "hide_stone_meet": {
+    "title": "Concealing the Evidence",
+    "text": "You slip the stone into your pocket, trying to hide its glow. The knights \napproach but seem less impressed.\n\n\"Greetings, young one. We are Knights of Hellstrom. You seem lost. What brings \nyou to our shores?\"\n\nThe stone pulses against your leg, urging you to reveal it.",
+    "choices": [
+      {
+        "text": "Tell them you're lost",
+        "next": "claim_lost"
+      },
+      {
+        "text": "Show them the stone",
+        "next": "show_stone"
+      }
+    ]
+  },
+  "claim_lost": {
+    "title": "A Lost Child",
+    "text": "\"I'm lost,\" you say truthfully. \"I don't know how I got here.\"\n\nKnight Commander Kira's expression softens. \"You're very far from any village, \nchild. This beach is at our kingdom's edge.\n\nThere's something different about you. How did you come to be here alone?\"\n\nThe stone grows warm, encouraging honesty.",
+    "choices": [
+      {
+        "text": "Tell them about the stone",
+        "next": "show_stone"
+      },
+      {
+        "text": "Ask where 'here' is",
+        "next": "ask_location"
+      }
+    ]
+  },
+  "ask_location": {
+    "title": "Where Am I?",
+    "text": "\"Where am I?\" you ask, looking around at the strange landscape.\n\n\"You stand on the shores of Hellstrom Kingdom,\" Knight Commander Kira replies. \n\"This is the Isle of Echoing Tides, our realm's easternmost point.\n\nThat is Castle Hellstrom in the distance. But tell me, child - how did you \ncome to be here? Our shores are protected by ancient magic.\"\n\nThe stone pulses, as if responding to her words.",
+    "choices": [
+      {
+        "text": "Tell her about the stone",
+        "next": "show_stone"
+      },
+      {
+        "text": "Explain how you got here",
+        "next": "explain_arrival"
+      }
+    ]
+  },
+  "explain_arrival": {
+    "title": "The Truth of Your Journey",
+    "text": "\"I found this stone in a forest near my home,\" you begin, holding up \nthe glowing orb. \"When I fell asleep holding it, I woke up here.\"\n\nThe knights exchange significant glances. Knight Commander Kira steps closer.\n\n\"A Traveler's Stone,\" she whispers. \"The prophecies spoke truly. You are the \none we have been waiting for.\"\n\nShe bows formally. \"We have long awaited the arrival of a Stone-Bearer from \nbeyond our realm.\"",
+    "choices": [
+      {
+        "text": "Ask about the prophecies",
+        "next": "prophecy_explanation"
+      },
+      {
+        "text": "Ask what a Stone-Bearer is",
+        "next": "ask_stone_bearer"
+      },
+      {
+        "text": "Agree to go with them",
+        "next": "journey_to_castle"
+      }
+    ]
+  }
+}

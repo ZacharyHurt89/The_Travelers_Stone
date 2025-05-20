@@ -1,0 +1,30 @@
+{
+  "meet_king": {
+    "title": "The Throne of Hellstrom",
+    "text": "The throne room is vast and magnificent, with black marble pillars reaching \nto a constellation-painted ceiling. Upon a throne of obsidian and silver sits \nKing Hellstrom himself.\n\nHe's younger than expected - a king with kind eyes bearing terrible worry. \nAs you approach with the glowing stone, he rises.\n\n\"So, the prophecy is fulfilled,\" he says, his voice echoing in the chamber. \n\"Young Rory, Stone-Bearer from beyond the veil, welcome to our realm.\"\n\nHe descends to stand before you.\n\n\"I will not lie - our kingdom faces its darkest hour. The Shadow grows stronger \neach day. But if you can save us, I promise riches beyond measure and fame \nthat will echo through the ages.\"",
+    "choices": [
+      {
+        "text": "Accept the quest to defeat the Shadow",
+        "next": "accept_quest"
+      }
+    ]
+  },
+  "accept_quest": {
+    "title": "The Hero's Preparation",
+    "text": "\"Your courage honors us all,\" King Hellstrom says with relief. \"But you \ncannot face the Shadow unprepared. Our royal armory contains weapons blessed \nby ancient mages - choose one that calls to your spirit.\"\n\nThree pedestals rise from the floor, each holding a magnificent weapon:\n\n⚔️ A ROYAL BLADE - Swift and precise, perfect for close combat\n🪓 A GREAT AXE - Heavy and devastating, cleaves through enemies  \n🏹 A MYSTIC BOW - Strikes from afar with magical arrows\n\n\"The Traveler's Stone will awaken the weapon's true power when you touch it. \nChoose wisely, young hero.\"",
+    "choices": [
+      {
+        "text": "Choose the Royal Blade",
+        "next": "blade_choice"
+      },
+      {
+        "text": "Choose the Great Axe",
+        "next": "axe_choice"
+      },
+      {
+        "text": "Choose the Mystic Bow",
+        "next": "bow_choice"
+      }
+    ]
+  }
+}
