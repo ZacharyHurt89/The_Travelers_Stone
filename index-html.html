@@ -54,6 +54,15 @@
             border-radius: 4px;
             font-size: 0.9em;
         }
+        .title-screen {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 10px;
+            line-height: 1.2;
+            cursor: pointer;
+            border-left: none;
+            padding-left: 0;
+        }
     </style>
 </head>
 <body>
@@ -81,10 +90,11 @@
                     element: null,
                     companion: null
                 };
-                this.currentScene = "intro";
+                this.currentScene = "title_screen"; // Start with title screen
                 this.gameOver = false;
                 
                 this.chapters = [
+                    "title-screens.json", // Title screens first
                     "chapter1-discovery.json",
                     "chapter2-crossing.json",
                     "chapter3-knights.json",
@@ -210,6 +220,11 @@
             }
 
             saveGame() {
+                // Don't save during title/dedication screens
+                if (this.currentScene === "title_screen" || this.currentScene === "dedication_screen") {
+                    return;
+                }
+                
                 const saveData = {
                     player: this.player,
                     currentScene: this.currentScene,
@@ -239,34 +254,59 @@
 
                 // Update title and text
                 document.getElementById('title').textContent = scene.title;
-                document.getElementById('scene-text').textContent = this.formatText(scene.text);
+                const sceneTextElement = document.getElementById('scene-text');
+                sceneTextElement.textContent = this.formatText(scene.text);
+                
+                // Handle title screens differently
+                const isTitleScreen = this.currentScene === "title_screen" || this.currentScene === "dedication_screen";
+                
+                // Title screen formatting
+                if (isTitleScreen) {
+                    sceneTextElement.classList.add('title-screen');
+                    sceneTextElement.onclick = () => this.processChoice(0);
+                } else {
+                    sceneTextElement.classList.remove('title-screen');
+                    sceneTextElement.onclick = null;
+                }
 
                 // Update choices
                 const choicesContainer = document.getElementById('choices');
                 choicesContainer.innerHTML = '';
-
-                if (scene.choices && scene.choices.length > 0) {
-                    scene.choices.forEach((choice, index) => {
-                        const button = document.createElement('button');
-                        button.className = 'choice-btn';
-                        button.textContent = choice.text;
-                        button.onclick = () => this.processChoice(index);
-                        choicesContainer.appendChild(button);
-                    });
-                }
-
-                // Update player info
-                let playerInfoText = `Health: ${this.player.health} | Score: ${this.player.score} | Magic: ${this.player.magic_power}`;
-                if (this.player.weapon) {
-                    playerInfoText += ` | Weapon: ${this.player.weapon}`;
-                    if (this.player.element) {
-                        playerInfoText += ` (${this.player.element})`;
+                
+                // Show/hide choices based on screen type
+                if (isTitleScreen) {
+                    choicesContainer.style.display = 'none';
+                } else {
+                    choicesContainer.style.display = 'block';
+                    if (scene.choices && scene.choices.length > 0) {
+                        scene.choices.forEach((choice, index) => {
+                            const button = document.createElement('button');
+                            button.className = 'choice-btn';
+                            button.textContent = choice.text;
+                            button.onclick = () => this.processChoice(index);
+                            choicesContainer.appendChild(button);
+                        });
                     }
                 }
-                if (this.player.companion) {
-                    playerInfoText += ` | Companion: ${this.player.companion}`;
+
+                // Show/hide status bar based on screen type
+                const statusBar = document.getElementById('status-bar');
+                if (isTitleScreen) {
+                    statusBar.style.display = 'none';
+                } else {
+                    statusBar.style.display = 'block';
+                    let playerInfoText = `Health: ${this.player.health} | Score: ${this.player.score} | Magic: ${this.player.magic_power}`;
+                    if (this.player.weapon) {
+                        playerInfoText += ` | Weapon: ${this.player.weapon}`;
+                        if (this.player.element) {
+                            playerInfoText += ` (${this.player.element})`;
+                        }
+                    }
+                    if (this.player.companion) {
+                        playerInfoText += ` | Companion: ${this.player.companion}`;
+                    }
+                    document.getElementById('player-info').textContent = playerInfoText;
                 }
-                document.getElementById('player-info').textContent = playerInfoText;
 
                 // Save game state
                 this.saveGame();
@@ -275,7 +315,8 @@
             async startGame() {
                 const loaded = await this.loadChapters();
                 if (loaded) {
-                    // Try to load saved game
+                    // Try to load saved game only if we have one
+                    // and it's not a new game with title screen
                     if (this.loadGame()) {
                         console.log("Saved game loaded");
                     }
