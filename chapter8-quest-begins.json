@@ -4,24 +4,24 @@
     "text": "Armed with your enchanted weapon and accompanied by your mystical companion, \nyou stand at Hellstrom Castle's gates. The kingdom stretches before you, parts \nalready touched by the Shadow's corruption.\n\nKnight Commander Kira approaches with a map and supplies.\n\n\"The Shadow's source lies in the Darkwood to the north,\" she explains. \"But \nbeware - the corruption has twisted the land itself. Creatures there are no \nlonger what they once were.\"\n\nYour companion stands ready beside you, and your weapon hums with elemental \npower. The fate of Hellstrom Kingdom now rests in your hands.\n\n[ADVENTURE CONTINUES...]\n\nThank you for playing Chapters 1 & 2 of The Traveler's Stone!\n\nYour choices have shaped your destiny:\n• Weapon: {weapon}\n• Element: {element}  \n• Companion: {companion}\n• Final Score: {score} points\n\nThe quest to defeat the Shadow awaits in Chapter 3...",
     "choices": [
       {
-        "text": "Start a new adventure",
-        "next": "intro"
+        "text": "Return to title screen",
+        "next": "title_screen"
       },
       {
-        "text": "Quit game",
-        "next": "quit"
+        "text": "Start a new adventure",
+        "next": "intro"
       }
     ],
     "special": "chapter_end"
   },
   "quit": {
-  "title": "End of Journey",
-  "text": "You decide to end your adventure for now.\n                \nThank you for playing The Traveler's Stone! Your journey awaits your return...",
-  "choices": [
-    {
-      "text": "Return to Main Screen",
-      "next": "intro"
-    }
-  ]
-}
+    "title": "End of Journey",
+    "text": "You decide to end your adventure for now.\n                \nThank you for playing The Traveler's Stone! Your journey awaits your return...",
+    "choices": [
+      {
+        "text": "Return to Title Screen",
+        "next": "title_screen"
+      }
+    ]
+  }
 }
