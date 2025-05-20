@@ -15,8 +15,13 @@
     "special": "chapter_end"
   },
   "quit": {
-    "title": "End of Journey",
-    "text": "You decide to end your adventure for now.\n                \nThank you for playing The Traveler's Stone! Your journey awaits your return...",
-    "choices": []
-  }
+  "title": "End of Journey",
+  "text": "You decide to end your adventure for now.\n                \nThank you for playing The Traveler's Stone! Your journey awaits your return...",
+  "choices": [
+    {
+      "text": "Return to Main Screen",
+      "next": "intro"
+    }
+  ]
+}
 }
