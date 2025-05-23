@@ -25,6 +25,18 @@
             color: #2c3e50;
             margin-bottom: 10px;
         }
+        #scene-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        #scene-image.hidden {
+            display: none;
+        }
         #scene-text {
             white-space: pre-line;
             margin-bottom: 20px;
@@ -68,6 +80,7 @@
 <body>
     <div id="game-container">
         <h1 id="title">The Traveler's Stone</h1>
+        <img id="scene-image" class="hidden" alt="Scene illustration">
         <div id="scene-text">Loading the game...</div>
         <div id="choices"></div>
         <div id="status-bar">
@@ -256,6 +269,16 @@
                 document.getElementById('title').textContent = scene.title;
                 const sceneTextElement = document.getElementById('scene-text');
                 sceneTextElement.textContent = this.formatText(scene.text);
+                
+                // Handle scene image
+                const imageElement = document.getElementById('scene-image');
+                if (scene.image) {
+                    imageElement.src = scene.image;
+                    imageElement.alt = scene.title;
+                    imageElement.classList.remove('hidden');
+                } else {
+                    imageElement.classList.add('hidden');
+                }
                 
                 // Handle title screens differently
                 const isTitleScreen = this.currentScene === "title_screen" || this.currentScene === "dedication_screen";

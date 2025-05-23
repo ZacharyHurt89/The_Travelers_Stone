@@ -1,6 +1,7 @@
 {
   "meet_knights": {
     "title": "The Knights of Hellstrom",
+    "image": "knights.jpg",
     "text": "Three knights in silver armor ride up, their leader dismounting to approach. \nShe has kind but stern eyes and an authoritative voice.\n\n\"Young one, we are Knights of Hellstrom, sworn to protect this realm. What \nbrings a child to our shores?\"\n\nHer eyes fall on the blue stone and freeze in awe.\n\n\"That is the Traveler's Stone of legend! The prophecy is true. You are the \nChosen One who will save our kingdom from the Shadow!\"\n\nThe knights behind her kneel in reverence.",
     "choices": [
       {

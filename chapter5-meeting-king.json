@@ -1,6 +1,7 @@
 {
   "meet_king": {
     "title": "The Throne of Hellstrom",
+    "image": "king.jpg",
     "text": "The throne room is vast and magnificent, with black marble pillars reaching \nto a constellation-painted ceiling. Upon a throne of obsidian and silver sits \nKing Hellstrom himself.\n\nHe's younger than expected - a king with kind eyes bearing terrible worry. \nAs you approach with the glowing stone, he rises.\n\n\"So, the prophecy is fulfilled,\" he says, his voice echoing in the chamber. \n\"Young Rory, Stone-Bearer from beyond the veil, welcome to our realm.\"\n\nHe descends to stand before you.\n\n\"I will not lie - our kingdom faces its darkest hour. The Shadow grows stronger \neach day. But if you can save us, I promise riches beyond measure and fame \nthat will echo through the ages.\"",
     "choices": [
       {
